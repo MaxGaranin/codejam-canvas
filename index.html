@@ -10,15 +10,52 @@
 </head>
 
 <body>
-    <header class="menu">
-
+    <header class="app-bar">
+        <div class="app-bar__nav-icon"></div>
+        <div class="app-bar__title">CodeJam - Pallete</div>
+        <div class="app-bar__menu-icon"></div>
     </header>
 
     <main class="main-container">
         <div class="tools-panel">
-            <div class="instruments"></div>
-            <div class="colors"></div>
-            <div class="tools-panel__empty"></div>
+            <ul class="instruments">
+                <li class="instruments-item">
+                    <div class="fill-item-icon"></div>
+                    <a class="item-title">Paint bucket</a>
+                </li>
+                <li class="instruments-item">
+                    <div class="select-color-item-icon"></div>
+                    <a class="item-title">Choose color</a>
+                </li>
+                <hr class="instruments-item-divider">
+                <li class="instruments-item">
+                    <div class="move-item-icon"></div>
+                    <a class="item-title">Move</a>
+                </li>
+                <li class="instruments-item">
+                    <div class="transform-item-icon"></div>
+                    <a class="item-title">Transform</a>
+                </li>
+            </ul>
+            <ul class="colors">
+                <li class="colors-item">
+                    <div class="current-color-item-icon"></div>
+                    <a class="item-title">Current color</a>
+                </li>
+                <li class="colors-item">
+                    <div class="prev-color-item-icon"></div>
+                    <a class="item-title">Prev color</a>
+                </li>
+                <hr class="colors-item-divider">
+                <li class="colors-item">
+                    <div class="red-color-item-icon"></div>
+                    <a class="item-title">red</a>
+                </li>
+                <li class="colors-item">
+                    <div class="blue-color-item-icon"></div>
+                    <a class="item-title">blue</a>
+                </li>
+            </ul>
         </div>
 
         <div class="canvas-container">
@@ -26,19 +63,25 @@
         </div>
 
         <div class="actions-panel">
-            <div class="switcher">
-                <ul>
-                    <li><a id="m4" href="">4x4</a></li>
-                    <li><a id="m32" href="">32x32</a></li>
-                    <li><a id="image256" href="">256x256</a></li>
-                </ul>
-            </div>
-            <div class="actions-panel__empty"></div>
+            <ul class="switcher">
+                <li class="switcher__item">
+                    <div class="switcher__item-icon"></div>
+                    <a class="switcher__item-link" id="m4">4x4</a>
+                </li>
+                <li class="switcher__item">
+                    <div class="switcher__item-icon"></div>
+                    <a class="switcher__item-link" id="m32">32x32</a>
+                </li>
+                <li class="switcher__item">
+                    <div class="switcher__item-icon"></div>
+                    <a class="switcher__item-link" id="image256">256x256</a>
+                </li>
+            </ul>
         </div>
     </main>
 
     <script src="./scripts/data.js"></script>
-    <script src="./scripts/canvas.js"></script>    
+    <script src="./scripts/canvas.js"></script>
     <script src="./scripts/app.js"></script>
 </body>
 
