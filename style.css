@@ -3,13 +3,98 @@
 }
 
 body {
-  width: 1000px;
-  height: 800px;
+  width: 1440px;
+  height: 900px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.menu {
+  -ms-flex-preferred-size: auto;
+      flex-basis: auto;
+  height: 48px;
+  background: cornsilk;
+}
+
+.main-container {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  background: honeydew;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.tools-panel {
+  -ms-flex-preferred-size: 228px;
+      flex-basis: 228px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.instruments {
+  -ms-flex-preferred-size: 246px;
+      flex-basis: 246px;
+  border: 1px solid gray;
+}
+
+.colors {
+  -ms-flex-preferred-size: 246px;
+      flex-basis: 246px;
+  border: 1px solid gray;
+}
+
+.tools-panel__empty {
+  -ms-flex-preferred-size: 150px;
+      flex-basis: 150px;
+}
+
+.actions-panel {
+  -ms-flex-preferred-size: 228px;
+      flex-basis: 228px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.switcher {
+  -ms-flex-preferred-size: 246px;
+      flex-basis: 246px;
+  border: 1px solid gray;
+}
+
+.actions-panel__empty {
+  -ms-flex-preferred-size: 450px;
+      flex-basis: 450px;
 }
 
 .canvas-container {
-  width: 100%;
-  height: 100%;
+  -ms-flex-preferred-size: auto 1 1;
+      flex-basis: auto 1 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
