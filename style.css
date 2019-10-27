@@ -298,6 +298,10 @@ body {
   line-height: 24px;
 }
 
+.switcher__item.selected {
+  background: lightgray;
+}
+
 .canvas-container {
   -ms-flex-preferred-size: auto 1 1;
       flex-basis: auto 1 1;

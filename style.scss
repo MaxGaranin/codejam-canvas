@@ -219,6 +219,10 @@ body {
     }
 }
 
+.switcher__item.selected {
+    background: lightgray;
+}
+
 // Canvas
 
 .canvas-container {
