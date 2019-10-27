@@ -6,34 +6,20 @@ canvas.height = canvasSize;
 
 let ctx = canvas.getContext('2d');
 
-// let m = m32x32;
-let m = m4x4;
-drawMatrix(m);
+drawMatrix(m4x4);
 
-// let src = "./data/image.png";
-// drawImage(src);
+m4.addEventListener('click', (event) => {
+    drawMatrix(m4x4);
+    event.preventDefault();
+});
 
-function drawMatrix(m) {
-    let blockCount = m.length;
-    let blockSize = canvasSize / blockCount;
+m32.addEventListener('click', () => {
+    drawMatrix(m32x32);
+    event.preventDefault();
+});
 
-    for (let i = 0; i < blockCount; i++) {
-        for (let j = 0; j < blockCount; j++) {
-            let data = m[i][j];
-            if (Array.isArray(data)) {
-                ctx.fillStyle = 'rgba(' + data + ')';
-            } else if (typeof data == 'string') {
-                ctx.fillStyle = '#' + data;
-            }
-            ctx.fillRect(i * blockSize, j * blockSize, blockSize, blockSize);
-        }
-    }
-}
-
-function drawImage(src) {
-    let image = new Image();
-    image.src = src;
-    image.onload = () => {
-        ctx.drawImage(image, 0, 0, canvasSize, canvasSize);
-    }
-}
+image256.addEventListener('click', () => {
+    let src = "./data/image.png";
+    drawImage(src);
+    event.preventDefault();
+});

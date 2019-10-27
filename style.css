@@ -87,6 +87,10 @@ body {
   border: 1px solid gray;
 }
 
+.switcher li {
+  list-style: none;
+}
+
 .actions-panel__empty {
   -ms-flex-preferred-size: 450px;
       flex-basis: 450px;
