@@ -12,10 +12,12 @@ body {
     flex-direction: column;    
 }
 
+// App Bar
+
 .app-bar {
     flex-basis: auto;
     height: 48px;
-    background: cornsilk;
+    border: 1px solid lightgray;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -47,9 +49,11 @@ body {
     margin-right: 20px;
 }
 
+// Main Container
+
 .main-container {
     flex-basis: 100%;
-    background: honeydew;
+    border: 1px solid lightgray;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -59,13 +63,16 @@ body {
     flex-basis: $tools-width;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
+
+// Instruments
 
 .instruments {
     flex-basis: $tools-height;
     border: 1px solid gray;
     padding: 0;
+    margin-top: 40px;
 }
 
 .instruments-item {
@@ -117,10 +124,13 @@ body {
     margin-left: 20px;
 }
 
+// Colors
+
 .colors {
     flex-basis: $tools-height;
     border: 1px solid gray;
     padding: 0;
+    margin-top: 40px;
 }
 
 .colors-item {
@@ -176,13 +186,16 @@ body {
     flex-basis: $tools-width;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: flex-start;
 }
+
+// Switcher
 
 .switcher {
     flex-basis: $tools-height;
     border: 1px solid gray;
     padding: 0;
+    margin-top: 40px;
     & .switcher__item {
         list-style: none;
         display: flex;
@@ -205,6 +218,8 @@ body {
         }
     }
 }
+
+// Canvas
 
 .canvas-container {
     flex-basis: auto 1 1;

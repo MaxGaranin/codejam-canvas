@@ -18,7 +18,7 @@ body {
   -ms-flex-preferred-size: auto;
       flex-basis: auto;
   height: 48px;
-  background: cornsilk;
+  border: 1px solid lightgray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,7 +65,7 @@ body {
 .main-container {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
-  background: honeydew;
+  border: 1px solid lightgray;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,8 +87,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .instruments {
@@ -96,6 +97,7 @@ body {
       flex-basis: 246px;
   border: 1px solid gray;
   padding: 0;
+  margin-top: 40px;
 }
 
 .instruments-item {
@@ -170,6 +172,7 @@ body {
       flex-basis: 246px;
   border: 1px solid gray;
   padding: 0;
+  margin-top: 40px;
 }
 
 .colors-item {
@@ -248,8 +251,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .switcher {
@@ -257,6 +261,7 @@ body {
       flex-basis: 246px;
   border: 1px solid gray;
   padding: 0;
+  margin-top: 40px;
 }
 
 .switcher .switcher__item {
