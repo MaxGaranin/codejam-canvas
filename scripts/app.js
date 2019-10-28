@@ -12,7 +12,7 @@ const ctx = canvas.getContext('2d');
 drawMatrix(MATRIX_4x4, ctx, CANVAS_SIZE);
 
 matrix4Link.addEventListener('click', (event) => {
-    drawMatrix(MATRIX_4x4, ctx, CANVAS_SIZE);
+    drawImageData(MATRIX_4x4, ctx, CANVAS_SIZE);
     event.preventDefault();
     selectItem(event);
 });

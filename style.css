@@ -291,5 +291,12 @@ body {
 #canvas {
   margin: auto;
   border: 1px solid black;
+  width: 512px;
+  height: 512px;
+  -ms-interpolation-mode: nearest-neighbor;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -o-pixelated;
+      image-rendering: pixelated;
 }
 /*# sourceMappingURL=style.css.map */
