@@ -9,23 +9,23 @@ canvas.height = CANVAS_SIZE;
 
 const ctx = canvas.getContext('2d');
 
-drawMatrix(MATRIX_4x4, ctx, CANVAS_SIZE);
+drawMatrix(MATRIX_4x4, ctx);
 
 matrix4Link.addEventListener('click', (event) => {
-    drawImageData(MATRIX_4x4, ctx, CANVAS_SIZE);
+    drawImageData(MATRIX_4x4, ctx);
     event.preventDefault();
     selectItem(event);
 });
 
 matrix32Link.addEventListener('click', () => {
-    drawMatrix(MATRIX_32x32, ctx, CANVAS_SIZE);
+    drawMatrix(MATRIX_32x32, ctx);
     event.preventDefault();
     selectItem(event);
 });
 
 image256Link.addEventListener('click', () => {
     let src = "./data/image.png";
-    drawImage(src, ctx, CANVAS_SIZE);
+    drawImage(src, ctx);
     event.preventDefault();
     selectItem(event);
 });
