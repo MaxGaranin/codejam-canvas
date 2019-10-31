@@ -1,4 +1,3 @@
-import {MATRIX_4x4, MATRIX_32x32} from './data.js';
 import {drawMatrix, drawImage} from './canvas.js';
 
 const CANVAS_SIZE = 512;
@@ -9,26 +8,32 @@ canvas.height = CANVAS_SIZE;
 
 const ctx = canvas.getContext('2d');
 
-drawMatrix(MATRIX_4x4, ctx, CANVAS_SIZE);
+startDrawMatrix('data/4x4.json');
 
 matrix4Link.addEventListener('click', (event) => {
-    drawMatrix(MATRIX_4x4, ctx, CANVAS_SIZE);
+    startDrawMatrix('data/4x4.json');
     event.preventDefault();
     selectItem(event);
 });
 
 matrix32Link.addEventListener('click', () => {
-    drawMatrix(MATRIX_32x32, ctx, CANVAS_SIZE);
+    startDrawMatrix('data/32x32.json');
     event.preventDefault();
     selectItem(event);
 });
 
 image256Link.addEventListener('click', () => {
     let src = "./data/image.png";
-    drawImage(src, ctx, CANVAS_SIZE);
+    drawImage(src, canvas, ctx);
     event.preventDefault();
     selectItem(event);
 });
+
+function startDrawMatrix(src) {
+    fetch(src)
+        .then(response => response.json())
+        .then(m => drawMatrix(m, canvas, ctx));
+}
 
 function selectItem($event) {
     let ul = $event.target.closest('ul');

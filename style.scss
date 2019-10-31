@@ -224,6 +224,9 @@ $tools-height: 246px;
 }
 
 #canvas {
-  margin: auto;
-  border: 1px solid black;
+    margin: auto;
+    border: 1px solid black;   
+    width: 512px;
+    height: 512px;
+    image-rendering: pixelated;
 }
