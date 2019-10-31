@@ -1,11 +1,11 @@
-const matrix4x4 = [
+export const MATRIX_4x4 = [
     ["00BCD4", "FFEB3B", "FFEB3B", "00BCD4"],
     ["FFEB3B", "FFC107", "FFC107", "FFEB3B"],
     ["FFEB3B", "FFC107", "FFC107", "FFEB3B"],
     ["00BCD4", "FFEB3B", "FFEB3B", "00BCD4"]
 ];
 
-const matrix32x32 = [
+export const MATRIX_32x32 = [
     [
         [
             255,

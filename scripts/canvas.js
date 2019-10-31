@@ -1,6 +1,6 @@
-function drawMatrix(matrix) {
+export function drawMatrix(matrix, ctx, canvasSize) {
     let blockCount = matrix.length;
-    let blockSize = CANVAS_SIZE / blockCount;
+    let blockSize = canvasSize / blockCount;
 
     for (let i = 0; i < blockCount; i++) {
         for (let j = 0; j < blockCount; j++) {
@@ -15,10 +15,10 @@ function drawMatrix(matrix) {
     }
 }
 
-function drawImage(src) {
+export function drawImage(src, ctx, canvasSize) {
     let image = new Image();
     image.src = src;
     image.onload = () => {
-        ctx.drawImage(image, 0, 0, CANVAS_SIZE, CANVAS_SIZE);
+        ctx.drawImage(image, 0, 0, canvasSize, canvasSize);
     }
 }
