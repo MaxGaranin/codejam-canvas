@@ -8,37 +8,40 @@ canvas.height = CANVAS_SIZE;
 
 const ctx = canvas.getContext('2d');
 
-startDrawMatrix('data/4x4.json');
+fetchAndDrawMatrix('data/4x4.json');
 
+const matrix4Link = document.getElementById('matrix4Link');
 matrix4Link.addEventListener('click', (event) => {
-    startDrawMatrix('data/4x4.json');
+    fetchAndDrawMatrix('data/4x4.json');
     event.preventDefault();
-    selectItem(event);
+    selectItem(event.target);
 });
 
+const matrix32Link = document.getElementById('matrix32Link');
 matrix32Link.addEventListener('click', () => {
-    startDrawMatrix('data/32x32.json');
+    fetchAndDrawMatrix('data/32x32.json');
     event.preventDefault();
-    selectItem(event);
+    selectItem(event.target);
 });
 
+const image256Link = document.getElementById('image256Link');
 image256Link.addEventListener('click', () => {
-    let src = "./data/image.png";
+    const src = "./data/image.png";
     drawImage(src, canvas, ctx);
     event.preventDefault();
-    selectItem(event);
+    selectItem(event.target);
 });
 
-function startDrawMatrix(src) {
+function fetchAndDrawMatrix(src) {
     fetch(src)
         .then(response => response.json())
-        .then(m => drawMatrix(m, canvas, ctx));
+        .then(matrix => drawMatrix(matrix, canvas, ctx));
 }
 
-function selectItem($event) {
-    let ul = $event.target.closest('ul');
+function selectItem(item) {
+    const ul = item.closest('ul');
     for (const li of ul.children) {
         li.classList.remove('selected');
     }
-    $event.target.closest('li').classList.add('selected');
+    item.closest('li').classList.add('selected');
 }
