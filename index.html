@@ -19,41 +19,31 @@
     <main class="main-container">
         <div class="tools-panel">
             <ul class="instruments">
-                <li class="instruments-item">
-                    <div class="fill-item-icon"></div>
-                    <a class="item-title">Paint bucket</a>
+                <li class="instruments__item instruments__item-fill">
+                    <a class="item-link">Paint bucket</a>
                 </li>
-                <li class="instruments-item">
-                    <div class="select-color-item-icon"></div>
-                    <a class="item-title">Choose color</a>
+                <li class="instruments__item instruments__item-transform item_divider">
+                    <a class="item-link">Choose color</a>
                 </li>
-                <hr class="instruments-item-divider">
-                <li class="instruments-item">
-                    <div class="move-item-icon"></div>
-                    <a class="item-title">Move</a>
+                <li class="instruments__item instruments__item-move">
+                    <a class="item-link">Move</a>
                 </li>
-                <li class="instruments-item">
-                    <div class="transform-item-icon"></div>
-                    <a class="item-title">Transform</a>
+                <li class="instruments__item instruments__item-transform">
+                    <a class="item-link">Transform</a>
                 </li>
             </ul>
             <ul class="colors">
-                <li class="colors-item">
-                    <div class="current-color-item-icon"></div>
-                    <a class="item-title">Current color</a>
+                <li class="colors__item colors__item-current">
+                    <a class="item-link">Current color</a>
                 </li>
-                <li class="colors-item">
-                    <div class="prev-color-item-icon"></div>
-                    <a class="item-title">Prev color</a>
+                <li class="colors__item colors__item-prev item_divider">
+                    <a class="item-link">Prev color</a>
                 </li>
-                <hr class="colors-item-divider">
-                <li class="colors-item">
-                    <div class="red-color-item-icon"></div>
-                    <a class="item-title">red</a>
+                <li class="colors__item colors__item-history-first">
+                    <a class="item-link">red</a>
                 </li>
-                <li class="colors-item">
-                    <div class="blue-color-item-icon"></div>
-                    <a class="item-title">blue</a>
+                <li class="colors__item colors__item-history-second">
+                    <a class="item-link">blue</a>
                 </li>
             </ul>
         </div>
@@ -65,15 +55,12 @@
         <div class="actions-panel">
             <ul class="switcher">
                 <li class="switcher__item selected">
-                    <div class="switcher__item-icon"></div>
                     <a class="switcher__item-link" id="m4">4x4</a>
                 </li>
                 <li class="switcher__item">
-                    <div class="switcher__item-icon"></div>
                     <a class="switcher__item-link" id="m32">32x32</a>
                 </li>
                 <li class="switcher__item">
-                    <div class="switcher__item-icon"></div>
                     <a class="switcher__item-link" id="image256">256x256</a>
                 </li>
             </ul>

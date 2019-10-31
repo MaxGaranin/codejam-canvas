@@ -100,7 +100,7 @@ body {
   margin-top: 40px;
 }
 
-.instruments-item {
+.instruments__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -115,56 +115,46 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 25px;
+}
+
+.instruments__item-fill::before, .instruments__item-choose::before, .instruments__item-move::before, .instruments__item-transform::before {
+  content: "";
+  -webkit-box-flex: 1;
+      -ms-flex: auto 0 0px;
+          flex: auto 0 0;
+  width: 20px;
+  height: 20px;
   margin-left: 20px;
 }
 
-.instruments-item-divider {
-  margin: 20px 0;
-}
-
-.fill-item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
+.instruments__item-fill::before {
   background: url("./assets/fill-drip.svg") no-repeat;
-  width: 20px;
-  height: 18px;
 }
 
-.select-color-item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
+.instruments__item-choose::before {
   background: url("./assets/eye-dropper.svg") no-repeat;
-  width: 20px;
-  height: 20px;
 }
 
-.move-item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
+.instruments__item-move::before {
   background: url("./assets/arrows-alt.svg") no-repeat;
-  width: 20px;
-  height: 20px;
 }
 
-.transform-item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
+.instruments__item-transform::before {
   background: url("./assets/exchange-alt.svg") no-repeat;
-  width: 20px;
-  height: 20px;
 }
 
-.item-title {
+.item-link {
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
   margin-left: 20px;
+}
+
+.item_divider {
+  padding-bottom: 20px;
+  border-bottom: 1px solid gray;
 }
 
 .colors {
@@ -175,7 +165,7 @@ body {
   margin-top: 40px;
 }
 
-.colors-item {
+.colors__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -190,55 +180,35 @@ body {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 25px;
-  margin-left: 20px;
 }
 
-.colors-item-divider {
-  margin: 20px 0;
-}
-
-.current-color-item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
+.colors__item-current::before, .colors__item-prev::before, .colors__item-history-first::before, .colors__item-history-second::before {
+  -webkit-box-flex: 20px;
+      -ms-flex: 20px 0 0px;
+          flex: 20px 0 0;
+  content: "";
   background: gray;
   border-radius: 50%;
   border: 1px solid black;
   width: 20px;
   height: 20px;
+  margin-left: 20px;
 }
 
-.prev-color-item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
-  background: #41F795;
-  border-radius: 50%;
-  border: 1px solid black;
-  width: 20px;
-  height: 20px;
+.colors__item-current::before {
+  background: gray;
 }
 
-.red-color-item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
-  background: #F74141;
-  border-radius: 50%;
-  border: 1px solid black;
-  width: 20px;
-  height: 20px;
+.colors__item-prev::before {
+  background: #41f795;
 }
 
-.blue-color-item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
-  background: #41B6F7;
-  border-radius: 50%;
-  border: 1px solid black;
-  width: 20px;
-  height: 20px;
+.colors__item-history-first::before {
+  background: #f74141;
+}
+
+.colors__item-history-second::before {
+  background: #41b6f7;
 }
 
 .actions-panel {
@@ -275,19 +245,25 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px;
+  margin-top: 10px;
 }
 
-.switcher .switcher__item .switcher__item-icon {
-  -webkit-box-flex: 1;
-      -ms-flex: auto 0 0px;
-          flex: auto 0 0;
+.switcher .switcher__item.selected {
+  background: lightgray;
+}
+
+.switcher .switcher__item::before {
+  content: "";
+  -webkit-box-flex: 10px;
+      -ms-flex: 10px 0 0px;
+          flex: 10px 0 0;
   width: 10px;
   height: 10px;
   border: 1px solid black;
+  margin-left: 10px;
 }
 
-.switcher .switcher__item .switcher__item-link {
+.switcher .switcher__item-link {
   -webkit-box-flex: 100%;
       -ms-flex: 100% 1 1;
           flex: 100% 1 1;
@@ -296,10 +272,6 @@ body {
   font-family: Roboto, Helvetica, sans-serif;
   font-size: 16px;
   line-height: 24px;
-}
-
-.switcher__item.selected {
-  background: lightgray;
 }
 
 .canvas-container {
