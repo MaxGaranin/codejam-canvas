@@ -1,6 +1,3 @@
-$tools-width: 228px;
-$tools-height: 246px;
-
 * {
   margin: 0;
 }
@@ -50,6 +47,9 @@ body {
 }
 
 // Main Container
+
+$tools-width: 228px;
+$tools-height: 246px;
 
 .main-container {
   flex-basis: 100%;

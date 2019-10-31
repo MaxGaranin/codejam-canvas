@@ -1,11 +1,11 @@
-let m4x4 = [
+const matrix4x4 = [
     ["00BCD4", "FFEB3B", "FFEB3B", "00BCD4"],
     ["FFEB3B", "FFC107", "FFC107", "FFEB3B"],
     ["FFEB3B", "FFC107", "FFC107", "FFEB3B"],
     ["00BCD4", "FFEB3B", "FFEB3B", "00BCD4"]
 ];
 
-let m32x32 = [
+const matrix32x32 = [
     [
         [
             255,
