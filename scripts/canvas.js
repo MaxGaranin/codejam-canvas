@@ -1,14 +1,14 @@
-function drawMatrix(m, canvas, ctx) {
-    canvas.width = m.length;
-    canvas.height = m.length;
+export function drawMatrix(matrix, canvas, ctx) {
+    canvas.width = matrix.length;
+    canvas.height = matrix.length;
 
-    let flattenedRGBAValues = m.reduce(concat);
+    let flattenedRGBAValues = matrix.reduce(concat);
     if (typeof(flattenedRGBAValues[0]) == 'string') {
         flattenedRGBAValues = flattenedRGBAValues.map(hexToRGBA);
     }
     flattenedRGBAValues = flattenedRGBAValues.reduce(concat);
 
-    const imgData = new ImageData(Uint8ClampedArray.from(flattenedRGBAValues), m.length, m.length);
+    const imgData = new ImageData(Uint8ClampedArray.from(flattenedRGBAValues), matrix.length, matrix.length);
     ctx.putImageData(imgData, 0, 0);
 }
 
@@ -21,7 +21,7 @@ const hexToRGBA = hexStr => [
     255
 ];
 
-function drawImage(src, canvas, ctx) {
+export function drawImage(src, canvas, ctx) {
     let image = new Image();
     image.src = src;
     image.onload = () => {

@@ -1,4 +1,3 @@
-import {MATRIX_4x4, MATRIX_32x32} from './data.js';
 import {drawMatrix, drawImage} from './canvas.js';
 
 const CANVAS_SIZE = 512;
@@ -23,14 +22,14 @@ matrix32Link.addEventListener('click', () => {
     selectItem(event);
 });
 
-image256.addEventListener('click', () => {
+image256Link.addEventListener('click', () => {
     let src = "./data/image.png";
     drawImage(src, canvas, ctx);
     event.preventDefault();
     selectItem(event);
 });
 
-async function startDrawMatrix(src) {
+function startDrawMatrix(src) {
     fetch(src)
         .then(response => response.json())
         .then(m => drawMatrix(m, canvas, ctx));
