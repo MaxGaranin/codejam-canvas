@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Codejam Canvas</title>
+</head>
+
+<body>
+    <header class="app-bar">
+        <div class="app-bar__nav-icon"></div>
+        <div class="app-bar__title">CodeJam - Pallete</div>
+        <div class="app-bar__menu-icon"></div>
+    </header>
+
+    <main class="main-container">
+        <div class="tools-panel">
+            <ul class="instruments">
+                <li class="instruments__item instruments__item-fill">
+                    <a class="item-link">Paint bucket</a>
+                </li>
+                <li class="instruments__item instruments__item-transform item_divider">
+                    <a class="item-link">Choose color</a>
+                </li>
+                <li class="instruments__item instruments__item-move">
+                    <a class="item-link">Move</a>
+                </li>
+                <li class="instruments__item instruments__item-transform">
+                    <a class="item-link">Transform</a>
+                </li>
+            </ul>
+            <ul class="colors">
+                <li class="colors__item colors__item-current">
+                    <a class="item-link">Current color</a>
+                </li>
+                <li class="colors__item colors__item-prev item_divider">
+                    <a class="item-link">Prev color</a>
+                </li>
+                <li class="colors__item colors__item-history-first">
+                    <a class="item-link">red</a>
+                </li>
+                <li class="colors__item colors__item-history-second">
+                    <a class="item-link">blue</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+
+        <div class="actions-panel">
+            <ul class="switcher">
+                <li class="switcher__item selected">
+                    <a class="switcher__item-link" id="matrix4Link">4x4</a>
+                </li>
+                <li class="switcher__item">
+                    <a class="switcher__item-link" id="matrix32Link">32x32</a>
+                </li>
+                <li class="switcher__item">
+                    <a class="switcher__item-link" id="image256Link">256x256</a>
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <script src="./scripts/app.js" type="module"></script>
+</body>
+
+</html>
